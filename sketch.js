@@ -70,7 +70,7 @@ function draw() {
   ellipse(pendulam5.position.x,pendulam5.position.y,30,30);
 
   rectMode(CENTER);
-  rect(340,200,300,30);
+  rect(roof.position.x,roof.position.y,300,30);
   rope1.display();
 }
 

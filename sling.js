@@ -9,7 +9,14 @@ class Sling{
             bodyB:body2,
             pointB:{x:this.offsetX,y:this.offsetY},
         }
-        this.Sling=Constraint.create(ops);
-        World.add(world,this.Sling);
+        this.sling=Constraint.create(ops);
+        World.add(world,this.sling);
     }
+    display() { 
+        var pointA = this.sling.bodyA.position;
+         var pointB = this.sling.bodyB.position;
+         stroke("white");
+          strokeWeight(4); 
+    line(pointA.x, pointA.y, pointB.x + this.offsetX, pointB.y + this.offsetY); 
+}
 }
