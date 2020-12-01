@@ -27,7 +27,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	roof=Bodies.rectangle(340,200,200,30,{isStatic:false});
+	roof=Bodies.rectangle(340,200,200,30,{isStatic:true});
 	World.add(world,roof);
 	var ops={
 		isStatic:true,
@@ -45,7 +45,11 @@ function setup() {
 	World.add(world,pendulam4);
 	pendulam5=Bodies.circle (220,400,2,ops);
 	World.add(world,pendulam5);
-	rope1=new Sling(pendulam1.body,roof.body,-2*2,0);
+	rope1=new Sling(pendulam1,roof,-2*2+125,0);
+	rope2=new Sling(pendulam2,roof,-2*2+70,0);
+	rope3=new Sling(pendulam3,roof,-2*2+10,0);
+	rope4=new Sling(pendulam4,roof,-2*2-50,0);
+	rope5=new Sling(pendulam5,roof,-2*2-110,0);
 	Engine.run(engine);
   
 }
@@ -72,6 +76,10 @@ function draw() {
   rectMode(CENTER);
   rect(roof.position.x,roof.position.y,300,30);
   rope1.display();
+  rope2.display();
+  rope3.display();
+  rope4.display();
+  rope5.display();
 }
 
 
