@@ -30,20 +30,20 @@ function setup() {
 	roof=Bodies.rectangle(340,200,200,30,{isStatic:true});
 	World.add(world,roof);
 	var ops={
-		isStatic:true,
+		isStatic:false,
 		friction:0.5,
 		restitution:0.3,
 		density:0.2
 	 }
-	pendulam1=Bodies.circle (460,400,2,ops);
+	pendulam1=Bodies.circle (500,400,30,ops);
 	World.add(world,pendulam1);
-	pendulam2=Bodies.circle (400,400,2,ops);
+	pendulam2=Bodies.circle (400,400,30,ops);
 	World.add(world,pendulam2);
-	pendulam3=Bodies.circle (340,400,2,ops);
+	pendulam3=Bodies.circle (340,400,30,ops);
 	World.add(world,pendulam3);
-	pendulam4=Bodies.circle (280,400,2,ops);
+	pendulam4=Bodies.circle (280,400,30,ops);
 	World.add(world,pendulam4);
-	pendulam5=Bodies.circle (220,400,2,ops);
+	pendulam5=Bodies.circle (230,400,30,ops);
 	World.add(world,pendulam5);
 	rope1=new Sling(pendulam1,roof,-2*2+125,0);
 	rope2=new Sling(pendulam2,roof,-2*2+70,0);
