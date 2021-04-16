@@ -32,8 +32,8 @@ function setup() {
 	var ops={
 		isStatic:false,
 		friction:0.5,
-		restitution:0.3,
-		density:0.2
+		restitution:1,
+		density:0.6
 	 }
 	pendulam1=Bodies.circle (500,400,30,ops);
 	World.add(world,pendulam1);
@@ -60,9 +60,9 @@ function draw() {
   background(0);
   Engine.update(engine);
 
-  if(keyCode===UP_ARROW){
-	  Matter.Body.applyForce(pendulam1,pendulam1.position,{x:pendulam1.position.x+50,y:pendulam1.position.y+45});
-  }
+ if(keyCode===UP_ARROW){
+	Matter.Body.applyForce(pendulam1,pendulam1.position,{x:50,y:-105});
+}
   //pendulam1.display();
   //pendulam2.display();
   ellipseMode(RADIUS);
