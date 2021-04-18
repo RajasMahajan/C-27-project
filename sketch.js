@@ -60,9 +60,7 @@ function draw() {
   background(0);
   Engine.update(engine);
 
- if(keyCode===UP_ARROW){
-	Matter.Body.applyForce(pendulam1,pendulam1.position,{x:50,y:-105});
-}
+
   //pendulam1.display();
   //pendulam2.display();
   ellipseMode(RADIUS);
@@ -85,5 +83,10 @@ function draw() {
   rope5.display();
 }
 
+function keyPressed()
+{ 
+	if(keyCode===UP_ARROW)
+	{ Matter.Body.applyForce(pendulam1,pendulam1.position,{x:50,y:-105}); }
+ }
 
 
